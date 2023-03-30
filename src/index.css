@@ -85,6 +85,18 @@ footer {
     font-size: 30px;
 }
 
+.row {
+    transition: transform 0.2s ease-in-out;
+}
+
+.row:hover {
+    transform: scale(1.05);
+}
+
+.row:not(:hover) {
+    filter: blur(3px);
+}
+
 .row:nth-child(odd) {
     padding-top: 50px;
     display: inline-flex;
