@@ -8,13 +8,18 @@
 body {
     background-color: #f8f8f8;
     overflow-x: auto;
+	background-color: #1b2442;
+
 }
 
 /* Sticky header styles */
 header {
-	background-color: #219471;
+    font-size: 25px;
 	color: #fff;
 	padding: 35px;
+    background-image: linear-gradient(to bottom, #2bc294, #176950);
+
+    /* background-color: #219471; */
 }
 
 header h1 {
@@ -27,7 +32,7 @@ h2 {
 
 nav {
 	float: right;
-	margin-top: 10px;
+	/* margin-top: 10px; */
 }
 
 nav ul {
@@ -58,14 +63,16 @@ footer {
 
 /* Set the style for the rows */
 .row {
+    padding-top: 50px;
     display: inline-flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 50px 0;
-    color: #4f5453;
-    background-color: #4c8ffc;
+    /* margin: 50px 0; */
+    color: white;
+    /* background-color: #1b2442; */
     width: 100%;
+    font-size: 30px;
 }
 
 /* Set the style for the row headers */
@@ -86,12 +93,14 @@ img {
     max-height: 100%;
     margin-right: 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
 }
 
 img:hover {
-    height: 150%;
-    margin-right: 40px;
-    box-shadow: 0 8px 6px rgba(0, 0, 0, 1);
+        /* height: 100%;
+        margin-right: 40px; */
+    /* box-shadow: 0 8px 6px rgba(0, 0, 0, 1); */
+    transform: scale(1.1);
 }
 
 ul {
@@ -114,7 +123,7 @@ a {
 }
 
 /* Set the style for the shelf */
-.row-content:before {
+/* .row-content:before {
     content: '';
     display: block;
     height: 50px;
@@ -123,10 +132,10 @@ a {
     bottom: calc(-50px / 2);
     background: #f8f8f8;
     z-index: -1;
-}
+} */
 
 /* Set the style for the shelf lines */
-.row-content:before,
+/* .row-content:before,
 .row-content:after {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
     background-size: 50% 100%;
@@ -136,18 +145,18 @@ a {
     width: 100%;
     position: absolute;
     content: '';
-}
+} */
 
 /* Set the style for the shelf line on top */
-.row-content:before {
+/* .row-content:before {
     top: 0;
-}
+} */
 
 /* Set the style for the shelf line on bottom */
-.row-content:after {
+/* .row-content:after {
     bottom: 0;
     transform: rotate(180deg);
-}
+} */
 
 .row li {
     text-align: center;
@@ -155,11 +164,16 @@ a {
 
 .image-text {
     position: relative;
-     /* adjust the value as needed to vertically center the text */
-    left: 50%; /* adjust the value as needed to horizontally center the text */
-    transform: translate(-90%, -110%); /* center the text precisely */
-    background-color: rgba(255, 255, 255, 0); /* set the background color and opacity for the text */
-    padding: 10px; /* add padding to the text for readability */
-    z-index: 1; /* set the z-index to 1 to position the text above the image */
+    left: 50%;
+    transform: translate(-80%, -110%);
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    z-index: 1;
     color: white;
-  }
+    /* transition: transform 0.2s ease-in-out; */
+}
+
+/* .image-text:hover {
+    color: rgba(255, 255, 255, 0);
+    /* transform: scale(1.1); */
+/* } */
