@@ -1,0 +1,112 @@
+/* Set margin and padding to 0 for the entire page */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the page */
+body {
+    background-color: #f8f8f8;
+}
+
+/* Sticky header styles */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Set the style for the rows */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+/* Set the style for the row headers */
+.row-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Set the style for the row content */
+.row-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Set the style for the images */
+img {
+    max-height: 300px;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Set the style for the list items */
+ul li {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+/* Set the style for the links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Set the style for the shelf */
+.row-content:before {
+    content: '';
+    display: block;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: calc(-50px / 2);
+    background: #f8f8f8;
+    z-index: -1;
+}
+
+/* Set the style for the shelf lines */
+.row-content:before,
+.row-content:after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    content: '';
+}
+
+/* Set the style for the shelf line on top */
+.row-content:before {
+    top: 0;
+}
+
+/* Set the style for the shelf line on bottom */
+.row-content:after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
