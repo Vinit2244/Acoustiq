@@ -7,33 +7,65 @@
 /* Set a background color for the page */
 body {
     background-color: #f8f8f8;
+    overflow-x: auto;
 }
 
 /* Sticky header styles */
 header {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+	background-color: #219471;
+	color: #fff;
+	padding: 35px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+h2 {
+    margin-right: 100%;
+}
+
+nav {
+	float: right;
+	margin-top: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
 }
 /* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
-    width: 100%;
+    text-align: center;
+    /* width: 100%; */
 }
 
 /* Set the style for the rows */
 .row {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+    color: #4f5453;
+    background-color: #4c8ffc;
+    width: 100%;
 }
 
 /* Set the style for the row headers */
@@ -44,16 +76,22 @@ footer {
 
 /* Set the style for the row content */
 .row-content {
-    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
 }
 
 /* Set the style for the images */
 img {
-    max-height: 300px;
-    margin-right: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 100%;
+    margin-right: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+img:hover {
+    height: 150%;
+    margin-right: 40px;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 1);
 }
 
 ul {
@@ -110,3 +148,18 @@ a {
     bottom: 0;
     transform: rotate(180deg);
 }
+
+.row li {
+    text-align: center;
+}
+
+.image-text {
+    position: relative;
+     /* adjust the value as needed to vertically center the text */
+    left: 50%; /* adjust the value as needed to horizontally center the text */
+    transform: translate(-90%, -110%); /* center the text precisely */
+    background-color: rgba(255, 255, 255, 0); /* set the background color and opacity for the text */
+    padding: 10px; /* add padding to the text for readability */
+    z-index: 1; /* set the z-index to 1 to position the text above the image */
+    color: white;
+  }
