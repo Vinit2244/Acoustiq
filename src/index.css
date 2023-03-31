@@ -107,7 +107,7 @@ a {
     font-family: 'Merriweather Sans', sans-serif;
     position: relative;
     left: 40%;
-    transform: translate(-44.5%, -110%);
+    transform: translate(-40%, -110%);
     padding: 10px;
     z-index: 1;
     color: white;
