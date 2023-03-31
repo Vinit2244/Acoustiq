@@ -17,7 +17,8 @@
 .inner-header {
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient(to bottom, #33447c, #1b2442);
+    background-image: linear-gradient(to bottom, #374a8b, #18203c);
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.5);
     top: 20px;
     position: fixed;
     z-index: 999;
@@ -48,6 +49,10 @@ nav a {
     text-decoration: none;
 }
 
+header + * {
+    padding-top: 120px !important;
+}
+
 /* Footer styles */
 footer {
     align-items: last baseline;
@@ -56,7 +61,8 @@ footer {
     height: 70px;
     color: #fff;
     padding: 10px;
-    position: relative;
+    position: static;
+    width: 100%;
     bottom: 0;
     text-align: center;
     /* background-image: url(./media/logos/pngtree-instagram-icon-instagram-logo-png-image_3584853.jpeg); */
