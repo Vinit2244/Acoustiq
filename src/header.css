@@ -17,7 +17,8 @@
 .inner-header {
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient(to bottom, #2bc294, #176950);
+    background-image: linear-gradient(to bottom, #374a8b, #18203c);
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.5);
     top: 20px;
     position: fixed;
     z-index: 999;
@@ -48,12 +49,17 @@ nav a {
     text-decoration: none;
 }
 
+header + * {
+    padding-top: 120px !important;
+}
+
 /* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
-    position: relative;
+    position: static;
+    width: 100%;
     bottom: 0;
     text-align: center;
     /* width: 100%; */
