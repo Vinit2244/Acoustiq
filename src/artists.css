@@ -29,7 +29,7 @@ body {
 .outer-header {
     font-size: 25px;
     color: #fff;
-    padding: 10px;
+    padding: 0px;
     
     top: 0px;
     z-index: 999;
@@ -84,14 +84,26 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
-    position: relative;
+    position: absolute;
     bottom: 0;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
     text-align: center;
     /* width: 100%; */
 }
 
+td {
+    border: solid white;
+}
+
+.artist {
+    height: 123px;
+}
+
 /* Set the style for the rows */
-.row {
+/* .row {
     padding: 50px 0 0 0;
     display: inline-flex;
     flex-direction: row;
@@ -102,16 +114,16 @@ footer {
     width: 100%;
     font-size: 30px;
     transition: transform 0.2s ease-in-out;
-}
+} */
 
-.row:hover {
+/* .row:hover {
     transform: scale(1.05);
 }
 
 .row:not(:hover) {
     filter: blur(2px);
-}
-
+} */
+/* 
 .row:nth-child(even) {
     opacity: 0.8;
     padding-top: 50px;
@@ -123,57 +135,57 @@ footer {
     background-color: #3f4040;
     width: 100%;
     font-size: 30px;
-}
+} */
 
 /* Set the style for the row headers */
-.row-header {
+/* .row-header {
     margin-bottom: 20px;
     text-align: right;
-}
+} */
 
 /* Set the style for the row content */
-.row-content {
+/* .row-content {
     position: relative;
     justify-content: center;
     align-items: center;
-}
-
+} */
+/* 
 .row li {
     text-align: center;
-}
+} */
 
 /* Set the style for the images */
-img {
+/* img {
     height: 350px;
     margin-right: 40px;
     box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-in-out;
-}
+} */
 
-img:hover {
+/* img:hover {
     transform: scale(1.1);
 }
 
 ul {
     display: flex;
     flex-direction: row;
-}
+} */
 
 /* Set the style for the list items */
-ul li {
+/* ul li {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
     list-style: none;
-}
+} */
 
 /* Set the style for the links */
-a {
+/* a {
     text-decoration: none;
     color: black;
-}
+} */
 /* text to be written over the pictures */
-.image-text {
+/* .image-text {
     background-color: black;
     font-family: 'Merriweather Sans', sans-serif;
     position: relative;
@@ -187,4 +199,4 @@ a {
     font-weight: bold;
     opacity: 0.7;
     width: 330px;
-}
+} */
