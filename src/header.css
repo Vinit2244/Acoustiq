@@ -17,7 +17,7 @@
 .inner-header {
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient(to bottom, #2bc294, #176950);
+    background-image: linear-gradient(to bottom, #33447c, #1b2442);
     top: 20px;
     position: fixed;
     z-index: 999;
@@ -50,13 +50,27 @@ nav a {
 
 /* Footer styles */
 footer {
+    align-items: last baseline;
+    /* padding-bottom: 30px; */
     background-color: #333;
+    height: 70px;
     color: #fff;
     padding: 10px;
     position: relative;
     bottom: 0;
     text-align: center;
+    /* background-image: url(./media/logos/pngtree-instagram-icon-instagram-logo-png-image_3584853.jpeg); */
+    /* background-image: url(https://media.geeksforgeeks.org/wp-content/cdn-uploads/social_sprites_icons.svg); */
+    /* background-repeat: no-repeat; */
     /* width: 100%; */
+}
+
+footer img {
+    filter: grayscale(100%);
+}
+
+footer img:hover {
+    filter: grayscale(0%);
 }
 
 
