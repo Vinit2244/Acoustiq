@@ -3,13 +3,32 @@
 }
 
 .heading {
-    padding-left: 30px;
+    /* margin-left: 500px; */
+    /* padding-left: 30px; */
+    /* padding-bottom: 200px; */
+    font-family: 'Gt super text book', Georgia, sans-serif;
+    margin-right: 0px;
+    margin-bottom: 170px;
     font-size: 12em;
     writing-mode: vertical-rl;
+    transform: scale(-1);
+}
+
+.content p {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+img:hover {
+    transform: scale(1);
+}
+
+.makers {
+    padding: 0px 590px 0px 30px;
+
 }
 
 .content {
-    padding: 0 40px;
+    /* padding: 0 40px; */
     font-size: 2em;
 }
 

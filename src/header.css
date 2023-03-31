@@ -77,11 +77,12 @@ footer img {
 
 footer img:hover {
     filter: grayscale(0%);
+    transform: scale(1);
 }
 
 
 .navigation-options {
-        font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .nav-tab:hover {

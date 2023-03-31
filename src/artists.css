@@ -121,7 +121,7 @@ nav a {
 }
 
 /* Footer styles */
-footer {
+/* footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
@@ -133,7 +133,7 @@ footer {
     width: 100%;
     text-align: center;
     /* width: 100%; */
-}
+/* } */
 
 td {
     border: solid white;
