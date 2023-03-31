@@ -42,7 +42,8 @@ body {
 .inner-header {
     display: flex;
     flex-direction: row;
-    background-color: #242c54;
+    /* background-color: #242c54; */
+    background-image: linear-gradient(to bottom, #44539a, #242c54);
     top: 20px;
     position: fixed;
     z-index: 999;
@@ -50,7 +51,47 @@ body {
 }
 
 .navigation-options {
-        font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#home_tab {
+    opacity: 0.5;
+}
+
+#home_tab:hover {
+    opacity: 1;
+}
+
+#artists_tab {
+    opacity: 0.5;
+}
+
+#artists_tab:hover {
+    opacity: 1;
+}
+
+#albums_tab {
+    opacity: 0.5;
+}
+
+#albums_tab:hover {
+    opacity: 1;
+}
+
+#songs_tab {
+    opacity: 0.5;
+}
+
+#songs_tab:hover {
+    opacity: 1;
+}
+
+#genres_tab {
+    opacity: 0.5;
+}
+
+#genres_tab:hover {
+    opacity: 1;
 }
 
 header h1 {
