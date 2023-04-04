@@ -28,6 +28,11 @@
 
 .active {
     font-weight: bold;
+    opacity: 0.7;
+    color: #e67f22;
+}
+
+.active:hover {
     opacity: 1;
 }
 
@@ -53,6 +58,11 @@ nav li {
 nav a {
     color: #fff;
     text-decoration: none;
+}
+
+.logo {
+    max-height: 60px;
+    margin-left: 30px;
 }
 
 header + * {
