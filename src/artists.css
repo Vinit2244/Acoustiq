@@ -55,7 +55,7 @@ body {
 }
 
 #home_tab {
-    opacity: 0.5;
+    opacity: 0.7799;
 }
 
 #home_tab:hover {
@@ -63,7 +63,7 @@ body {
 }
 
 #artists_tab {
-    opacity: 0.5;
+    opacity: 0.7799;
 }
 
 #artists_tab:hover {
@@ -71,7 +71,7 @@ body {
 }
 
 #albums_tab {
-    opacity: 0.5;
+    opacity: 0.7799;
 }
 
 #albums_tab:hover {
@@ -79,18 +79,18 @@ body {
 }
 
 #songs_tab {
-    opacity: 0.5;
+    opacity: 0.7799;
 }
 
 #songs_tab:hover {
     opacity: 1;
 }
 
-#genres_tab {
-    opacity: 0.5;
+#about_tab {
+    opacity: 0.7799;
 }
 
-#genres_tab:hover {
+#about_tab:hover {
     opacity: 1;
 }
 
