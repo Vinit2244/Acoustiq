@@ -65,9 +65,9 @@ nav a {
     margin-left: 30px;
 }
 
-header + * {
-    padding-top: 120px !important;
-}
+/* header {
+    padding-top: 120px;
+} */
 
 /* Footer styles */
 footer {
@@ -104,4 +104,19 @@ footer img:hover {
 
 .nav-tab:not(:hover,.active) {
     opacity: 0.5;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.4em;
+}
+
+/* Set the style for the list items */
+ul li {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    list-style: none;
 }

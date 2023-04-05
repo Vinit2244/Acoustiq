@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Songs Database - Landing Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Lato&family=Merriweather+Sans&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="header.css" />
+    <link rel="stylesheet" type="text/css" href="albums.css" />
+  </head>
+  
+  <body>
+    <!-- Background Image div -->
+    <div class="background-image"></div>
+    
+    <!-- Sticky header -->
+    <header class="outer-header">
+      <div class="inner-header">
+	<img src="./logo.png" alt="Logo" class="logo">
+	<nav>
+	  <ul class="navigation-options">
+	    <li><a href="index.html" class="nav-tab">Home</a></li>
+	    <li><a href="artists.html" class="nav-tab">Artists</a></li>
+	    <li><a href="albums.html" class="nav-tab active">Albums</a></li>
+	    <li><a href="#" class="nav-tab">Songs</a></li>
+	    <li><a href="about.html" class="nav-tab">About</a></li>
+	  </ul>
+	</nav>
+      </div>
+    </header>
+    <div class="outer">
+    <h1 class="heading">Albums</h1>
+    <div class="album-row" >
+        <!-- <div class="album-row-header">
+          <h2>Top Artists</h2>
+        </div> -->
+        <div class="album-row-content">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="./media/artists/arijit-singh.jpg" alt="" />
+                <div class="image-text">Arijit Singh</div></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./media/artists/linkin-park.jpg" alt="" />
+                <div class="image-text">Linkin Park</div></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./media/artists/ed-sheeran.jpg" alt="" />
+                <div class="image-text">Ed Sheeran</div></a>
+            </li>
+            <li>
+                <a href="#">
+                  <img  src="./media/albums/Shivers.jpeg" alt="" />
+                  <div class="image-text">Shivers</div></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Top 3 albums row -->
+      <div class="album-row">
+        <!-- <div class="album-row-header">
+          <h2>Top Albums</h2>
+        </div> -->
+        <div class="album-row-content">
+          <ul>
+            <li>
+              <a href="#">
+                <img  src="./media/albums/Shivers.jpeg" alt="" />
+                <div class="image-text">Shivers</div></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./media/albums/Cope.jpeg" alt="" />
+                <div class="image-text">Cope</div></a>
+            </li>
+            <li>
+                <a href="#">
+                  <img  src="./media/albums/Shivers.jpeg" alt="" />
+                  <div class="image-text">Shivers</div></a>
+              </li>
+              <li>
+                <a href="#">
+                  <img  src="./media/albums/Shivers.jpeg" alt="" />
+                  <div class="image-text">Shivers</div></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="album-row">
+        <!-- <div class="album-row-header">
+          <h2>Top Albums</h2>
+        </div> -->
+        <div class="album-row-content">
+          <ul>
+            <li>
+              <a href="#">
+                <img  src="./media/albums/Shivers.jpeg" alt="" />
+                <div class="image-text">Shivers</div></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./media/albums/Cope.jpeg" alt="" />
+                <div class="image-text">Cope</div></a>
+            </li>
+            <li>
+                <a href="#">
+                  <img  src="./media/albums/Shivers.jpeg" alt="" />
+                  <div class="image-text">Shivers</div></a>
+              </li>
+              <li>
+                <a href="#">
+                  <img  src="./media/albums/Shivers.jpeg" alt="" />
+                  <div class="image-text">Shivers</div></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <a href="#">
+        <img src="./media/logos/Linkedin.png" alt="" style="height: 45px; padding-right: 22px;">
+      </a>
+      <a href="#">
+        <img src="./media/logos/instagram.png" alt="" style="height: 43px; padding-right: 6px;">
+      </a>
+      <a href="#">
+        <img src="./media/logos/Facebook.png" alt="" style="height: 45px;">
+      </a>
+      <a href="#">
+        <img src="./media/logos/Reddit.png" alt="" style="height: 45px; padding-left: 7px;">
+      </a>
+      <a href="#">
+        <img src="./media/logos/Twitter.png" alt="" style="height: 45px; padding-left: 20px;">
+      </a>
+      <p style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+        &copy;  2023   |   Team: ISS Lite |   <a href="about.html" style="color: grey;">about</a>
+      </p>
+      <img src="./logo.png" alt="" style="height: 40px;">
+    </footer>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+/* .artists {
+    display: flex;
+    flex-direction: row;
+} */
+
+.outer {
+    /* margin: 0px 50px 0px 50px; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    background-image: url(./bookshelf.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    justify-content: center;
+    background-size: cover;
+}
+
+.album-row {
+    padding: 0px 0 0 0;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    color: white;
+    width: 100%;
+    font-size: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* .album-row:hover {
+    transform: scale(1.05);
+}
+
+.album-row:not(:hover) {
+    filter: blur(2px);
+} */
+
+.album-row:nth-child(even) {
+    padding-top: 20px;
+    /* padding-left: 20px;
+    flex-direction: row-reverse;
+    color: white;
+    background-color: #3f4040;
+    opacity: 0.8; */
+}
+
+/* Set the style for the row headers */
+.album-row-header {
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 1.5em;
+}
+
+/* Set the style for the row content */
+.album-row-content {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-row li {
+    text-align: center;
+}
+
+/* Set the style for the images */
+.album-row img {
+    height: 350px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    /* column-gap: 1.4em; */
+}
+
+/* Set the style for the list items */
+ul li {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+/* Set the style for the links */
+a {
+    text-decoration: none;
+    color: black;
+}
+/* text to be written over the pictures */
+.image-text {
+    background-color: black;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: relative;
+    left: 40%;
+    transform: translate(-40%, -110%);
+    padding: 10px;
+    z-index: 1;
+    color: white;
+    width: fit-content;
+    border-radius: 0px;
+    /* font-weight: 100; */
+    opacity: 0.7;
+    width: 330px;
+}
+
+.heading {
+    margin-left: 100px;
+    margin-bottom: 200px;
+    padding-left: 30px;
+    padding-bottom: 100px;
+    font-family: 'Gt super text book', Georgia, sans-serif;
+    font-size: 12em;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    color: white;
+}

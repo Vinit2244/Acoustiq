@@ -1,12 +1,33 @@
 * {
+    margin: 0;
+    padding: 0;
     color: white;
 }
 
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./media/background/bgimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  
+
+/* Set a background color for the page */
+body {
+    overflow-x: auto;
+    background-color: #1b2442;
+}
+
 .heading {
-    margin-left: 100px;
-    margin-bottom: 200px;
+    margin-left: 30px;
+    margin-bottom: 50px;
     padding-left: 30px;
-    padding-bottom: 100px;
     font-family: 'Gt super text book', Georgia, sans-serif;
     font-size: 12em;
     writing-mode: vertical-rl;
@@ -57,7 +78,6 @@ img:hover {
 }
 
 .content {
-    /* padding: 0 40px; */
     font-size: 2em;
 }
 
@@ -65,3 +85,7 @@ img:hover {
     display: flex;
 }
 
+.email {
+    color: grey;
+    font-size: 25px;
+}
