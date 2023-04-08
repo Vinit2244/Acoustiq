@@ -86,10 +86,12 @@ table {
 .list th {
     border-bottom: solid gray;
     padding-left: 10px;
+    /* font-family: 'Raleway', sans-serif; */
 }
 
 .list td {
     padding-left: 10px;
+    /* font-family: 'Raleway', sans-serif; */
 }
 
 .list tr:nth-child(even) {

@@ -12,7 +12,7 @@
     rel="stylesheet">
 
   <!-- CSS Files -->
-  <link rel="stylesheet" type="text/css" href="albums.css" />
+  <link rel="stylesheet" type="text/css" href="artists.css" />
   <link rel="stylesheet" type="text/css" href="header.css" />
 </head>
 
@@ -27,89 +27,40 @@
       <nav>
         <ul class="navigation-options">
           <li><a href="index.html" class="nav-tab">Home</a></li>
-          <li><a href="artists.html" class="nav-tab">Artists</a></li>
-          <li><a href="albums.html" class="nav-tab active">Albums</a></li>
+          <li><a href="artists.html" class="nav-tab active">Artists</a></li>
+          <li><a href="albums.html" class="nav-tab">Albums</a></li>
           <li><a href="songs.html" class="nav-tab">Songs</a></li>
           <li><a href="about.html" class="nav-tab">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="heading-div" >
-    <h1 class="heading">Artist Name</h1>
-    <h2 class="heading-2">5 Albums</h2>
-  </div>
-  <img src="./media/artists/arijit-singh.jpg" alt="Arijit-Singh" style="width: 450px; border-radius: 50%; position: absolute; right: 50px; top: 70px; z-index: 1000;">
-  <!-- <table style="width: 100%;">
-    <tr style="height: 100px;"></tr>
-  </table> -->
+  <div class="heading-div"><h1 class="heading">Artists</h1></div>
   
   <div class="artists">
     <!-- Top 3 artists row -->
     <div class="rows">
+        {% for artist_seq in artists_list %}
       <div class="row">
         <div class="row-content">
           <ul style="column-gap: 5em;">
-            <li class="artist-box">
-              <div >
-              <a class="artist-img-link" href="#">
-                <img src="./media/albums/Divide.jpeg" alt="" class="artist-img" />
-                <div class="image-text">
-                  Album Name <br>
-                  5 Songs <br>
-                </div>
-              </a>
-            </div>
-            </li>
-            <li>
-              <a class="artist-img-link" href="#">
-                <img src="./media/artists/linkin-park.jpg" alt="" class="artist-img" />
-                <div class="image-text">Linkin Park</div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="row-content">
-          <ul style="column-gap: 5em;">
-            <li class="artist-box">
-              <div >
-              <a class="artist-img-link" href="#">
-                <img src="./media/artists/arijit-singh.jpg" alt="" class="artist-img" />
-                <div class="image-text">
-                  Arijit Singh <br>
-                  5 Albums <br>
-                </div>
-              </a>
-            </div>
-            </li>
-            <li>
-              <a class="artist-img-link" href="#">
-                <img src="./media/artists/linkin-park.jpg" alt="" class="artist-img" />
-                <div class="image-text">Linkin Park</div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="row-content" style="padding-bottom: 50px;">
-          <ul style="column-gap: 5em;">
+            {% for artist in artist_seq %}
             <li class="artist-box">
               <div>
-              <a class="artist-img-link" href="#">
-                <img src="./media/artists/arijit-singh.jpg" alt="" class="artist-img" />
+              <a class="artist-img-link" href="{{artist.html_path}}.html">
+                <img src="{{artist.img_path}}.jpeg" alt="" class="artist-img" />
                 <div class="image-text">
-                  Arijit Singh <br>
-                  5 Albums <br>
+                  {{artist.name}} <br>
+                  {{artist.num_albums}} <br>
                 </div>
               </a>
             </div>
             </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
   <!-- Footer -->
