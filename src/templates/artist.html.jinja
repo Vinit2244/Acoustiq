@@ -49,11 +49,11 @@
             {% for artist in artist_seq %}
             <li class="artist-box">
               <div>
-              <a class="artist-img-link" href="{{artist.html_path}}.html">
-                <img src="{{artist.img_path}}.jpeg" alt="" class="artist-img" />
+              <a class="artist-img-link" href="{{ artist.html_path }}">
+                <img src="{{ artist.img_path }}" alt="{{ artist.name }}" class="artist-img" />
                 <div class="image-text">
-                  {{artist.name}} <br>
-                  {{artist.num_albums}} <br>
+                  {{ artist.name }} <br>
+                  {{ artist.num_albums }} Albums<br>
                 </div>
               </a>
             </div>

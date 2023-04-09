@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Songs Database - Landing Page</title>
-    <link rel="shortcut icon" href="./logo_crp.png" type="image/x-icon">
-
+    <title>{{ album.name }} - {{ album.artist }}</title>
+    <link rel="shortcut icon" href="../logo_crp.png" type="image/x-icon">
+    <base href="../">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Lato&family=Merriweather+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <!-- CSS Files -->
-    <link rel="stylesheet" type="text/css" href="album-common.css" />
-    <link rel="stylesheet" type="text/css" href="header.css" />
+    <link rel="stylesheet" type="text/css" href="./album-common.css" />
+    <link rel="stylesheet" type="text/css" href="./header.css" />
 </head>
 
 <body>
@@ -28,20 +28,22 @@
             <img src="./logo.png" alt="Logo" class="logo">
             <nav>
                 <ul class="navigation-options">
-                    <li><a href="index.html" class="nav-tab" style="font-weight: bold;">Home</a></li>
-                    <li><a href="artists.html" class="nav-tab">Artists</a></li>
-                    <li><a href="albums.html" class="nav-tab">Albums</a></li>
-                    <li><a href="songs.html" class="nav-tab active">Songs</a></li>
-                    <li><a href="about.html" class="nav-tab">About</a></li>
+                    <li><a href="./index.html" class="nav-tab" style="font-weight: bold;">Home</a></li>
+                    <li><a href="./artists.html" class="nav-tab">Artists</a></li>
+                    <li><a href="./albums.html" class="nav-tab">Albums</a></li>
+                    <li><a href="./songs.html" class="nav-tab active">Songs</a></li>
+                    <li><a href="./about.html" class="nav-tab">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
 
-    <table style="width: 100%; background-color: #d80818; background: linear-gradient(to bottom,#d80818,transparent); opacity: 0.8;">
+    <table style="width: 100%; 
+/*background-color: #d80818; background: linear-gradient(to bottom,#d80818,transparent);*/
+ opacity: 0.8;">
         <tr>
-            <td style="width: 280px; padding-left: 20px;" rowspan="2"><img src="{{ album.img_path }}" alt=""
+            <td style="width: 280px; padding-left: 20px;" rowspan="2"><img src="{{ album.img_path }}" alt="{{ album.name }}"
                     style="height: 400px;"></td>
             <td style="height: 200px;"></td>
         </tr>
@@ -66,20 +68,20 @@
         </tr>
     </table>
     <div class="tab">
-        <table class="list" CELLSPACING="0">
+        <table class="list" cellspacing="0">
             <tr style="font-size: 30px;">
                 <th style="width: 40px;">#</th>
                 <th style="width:500px;">Song</th>
                 <th style="width:500px;">Artist</th>
                 <th></th>
-                <th><img src="./media/logos/clock.png" alt="" style="height: 45px;"></th>
+                <th><img src="../media/logos/clock.png" alt="" style="height: 45px;"></th>
                 <th></th>
             </tr>
             {% for song in songs_list %}
             <tr style="font-size: 30px;">
-                <td class="index">{{ loop.index }}</td>
+                <td class="index">{{ song.disc_num }}.{{ song.track_num }}</td>
                 <td>{{ song.name }}</td>
-                <td>{{ song.artist }}</td>
+                <td>{{ album.artist }}</td>
                 <td></td>
                 <td>{{ song.duration_min }}:{{ song.duration_sec }}</td>
                 <td class="social">
@@ -92,6 +94,7 @@
                     </a>
                 </td>
             </tr>
+	    {% endfor %}
         </table>
     </div>
 
