@@ -132,7 +132,7 @@ a {
     display: flex;
     flex-direction: row;
     background: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 black;
     backdrop-filter: blur( 2px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 40px;
@@ -145,4 +145,8 @@ a {
 
 .artist-box:hover {
     transform: scale(1.1);
+}
+
+.image-text {
+    font-family: 'Abril Fatface', cursive;
 }
