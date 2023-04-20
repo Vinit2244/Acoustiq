@@ -15,10 +15,9 @@
     background-size: cover;
     opacity: 0.2;
     z-index: -1;
-  }
+}
   
 
-/* Set a background color for the page */
 body {
     overflow-x: auto;
     background-color: #1b2442;
