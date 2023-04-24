@@ -1,0 +1,411 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 540px;
+    padding-left: 20px;
+    color: white;
+    font-size: 6rem;
+    background-image: linear-gradient(to right, #374a8b, transparent)
+}
+
+.description {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.description2 {
+    font-size: 30px;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#artist-image {
+    margin: 10px;
+    float: left;
+    margin-left: 20px;
+    width: 500px;
+    transition: width 0.5s;
+    position: absolute;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+#artist-text {
+    z-index: 2;
+}
+
+p {
+    text-align: justify;
+    margin: 50px;
+    line-height: 1.5;
+}
+
+.timer-heading {
+    float: left;
+    font-size: 60px;
+    padding-top: 40px;
+    margin-left: 250px;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.card {
+  display: flex;
+  margin-left: 20px;
+  border-radius: 2.2rem;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.8rem;
+  width: 96.5%;
+  margin-top: 50px;
+}
+
+.rating-container {
+  display: flex;
+}
+
+.rating-text p {
+  color: white;
+}
+
+.rating {
+  background-color: rgba(0, 0, 16, 0.5);
+  padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+  border-radius: 2.2rem;
+}
+
+svg {
+  fill: rgb(242, 242, 242);
+  height: 3.6rem;
+  width: 3.6rem;
+  margin: 0.2rem;
+  margin-top: 2rem;
+}
+
+.rating-form-2 svg {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+#radios label {
+  position: relative;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"] + svg {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input + svg {
+  cursor: pointer;
+}
+
+input[class="super-happy"]:hover + svg,
+input[class="super-happy"]:checked + svg,
+input[class="super-happy"]:focus + svg {
+  fill: rgb(0, 109, 217);
+}
+
+input[class="happy"]:hover + svg,
+input[class="happy"]:checked + svg,
+input[class="happy"]:focus + svg {
+  fill: rgb(0, 204, 79);
+}
+
+input[class="neutral"]:hover + svg,
+input[class="neutral"]:checked + svg,
+input[class="neutral"]:focus + svg {
+  fill: rgb(232, 214, 0);
+}
+
+input[class="sad"]:hover + svg,
+input[class="sad"]:checked + svg,
+input[class="sad"]:focus + svg {
+  fill: rgb(229, 132, 0);
+}
+
+input[class="super-sad"]:hover + svg,
+input[class="super-sad"]:checked + svg,
+input[class="super-sad"]:focus + svg {
+  fill: rgb(239, 42, 16);
+}
+
+#review {
+    width: 400px;
+    height: 30px;
+    resize: none;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    overflow: hidden;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    color: rgb(167, 165, 165);
+}
+
+#review:focus {
+    outline: none;
+}
+
+input[type="button"] {
+    margin-left: 46%;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    border: transparent;
+}
+
+input[type="button"] {
+    background-color: #1e274a;
+    color: #ed8d39;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+}
+
+input[type="button"]:hover {
+    background-color: #ed8d39;
+    color: #1d2648;
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    color: rgb(167, 165, 165);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    font-size: 30px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.flip-clock {
+    text-align: center;
+    perspective: 400px;
+    margin: 20px auto;
+}
+
+.flip-clock *, .flip-clock *:before, .flip-clock *:after {
+    box-sizing: border-box;
+}
+
+.flip-clock__piece {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.flip-clock__slot {
+    font-size: 1vw;
+}
+
+.card2 {
+    display: block;
+    position: relative;
+    padding-bottom: 0.72em;
+    font-size: 4vw;
+    line-height: 0.95;
+    margin: 15px;
+}
+
+.card__top, .card__bottom, .card__back::before, .card__back::after {
+    display: block;
+    height: 0.72em;
+    color: #ccc;
+    background: #222;
+    padding: 0.25em 0.25em;
+    border-radius: 0.15em 0.15em 0 0;
+    transform-style: preserve-3d;
+    width: 1.8em;
+    transform: translateZ(0);
+}
+.card__bottom {
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-top: solid 1px #000;
+    background: #393939;
+    border-radius: 0 0 0.15em 0.15em;
+    pointer-events: none;
+    overflow: hidden;
+}
+.card__bottom::after {
+    display: block;
+    margin-top: -0.72em;
+}
+
+.card__back::before, .card__bottom::after {
+    content: attr(data-value);
+}
+
+.card__back {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0%;
+    pointer-events: none;
+}
+
+.card__back::before {
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.flip .card__back::before {
+    animation: flipTop 0.3s cubic-bezier(.37,.01,.94,.35);
+    animation-fill-mode: both;
+    transform-origin: center bottom;
+}
+
+.flip .card__back .card__bottom {
+    transform-origin: center top;
+    animation-fill-mode: both;
+    animation: flipBottom 0.6s cubic-bezier(.15,.45,.28,1);
+}
+
+@keyframes flipTop {
+    0% {
+        transform: rotateX(0deg);
+        z-index: 2;
+   }
+    0%, 99% {
+        opacity: 0.99;
+   }
+    100% {
+        transform: rotateX(-90deg);
+        opacity: 0;
+   }
+}
+
+@keyframes flipBottom {
+    0%, 50% {
+        z-index: -1;
+        transform: rotateX(90deg);
+        opacity: 0;
+   }
+    51% {
+        opacity: 0.99;
+   }
+    100% {
+        opacity: 0.99;
+        transform: rotateX(0deg);
+        z-index: 5;
+   }
+}
+
+
+#foot {
+    align-items: last baseline;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+#footer-img {
+    margin: 0px;
+    padding: 0px;
+    filter: grayscale(100%);
+    padding-left: 830px;
+    background-color: #333;
+}
+
+#footer-p {
+    margin: 0px;
+    text-align: center;
+    background-color: #333;
+}
+
+#footer-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1);
+    background-color: #333;
+}
+
+.footer-img-div {
+    padding-top: 10px;
+    width: 100%;
+    background-color: #333;
+}
+
+.social-svg {
+    margin-top: 0px;
+}
+
+#table-div {
+    width: 100%;
+}
+
+#reviews-table {
+    margin-left: 30px;
+    width: 97%;
+    font-size: 30px;
+}
+
+#table-heading {
+    font-size: 50px;
+    border: transparent;
+}
+#user-th {
+    width: 20vw;
+}
+
+#reviews-table-body tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#reviews-table-body tr:nth-child(odd) {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#reviews-table-body tr:nth-child(even) td:nth-child(even) {
+    border-top-right-radius: 20px;
+    text-align: center;
+    border: transparent;
+}
+
+#reviews-table-body tr:nth-child(even) td:nth-child(odd) {
+    border-top-left-radius: 20px;
+    border: transparent;
+    font-size: 40px;
+}
+
+#reviews-table-body tr:nth-child(odd) td:nth-child(odd) {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: transparent;
+    font-size: 40px;
+}
+
+th:nth-child(odd) {
+    width: 100px;
+}
