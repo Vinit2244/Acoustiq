@@ -28,6 +28,13 @@ function insert_into_dom (elements) {
 
     const fragment = document.createDocumentFragment();
 
+    if (elements.length == 0) {
+	const error_heading = document.createElement('h1');
+	error_heading.id = "error-result";
+	error_heading.textContent = "Aw! Couldn't find any results.";
+	fragment.append(error_heading);
+    }
+    
     elements.forEach((el) => {
 	const div = document.createElement('div');
 	div.className = "search-result";

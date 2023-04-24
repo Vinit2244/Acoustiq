@@ -108,3 +108,8 @@ label {
     gap: 10px;
     align-items: center;
 }
+
+#error-result {
+    color: white;
+    font-size: 40px;
+}
