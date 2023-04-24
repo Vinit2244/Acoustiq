@@ -65,10 +65,6 @@ nav a {
     margin-left: 30px;
 }
 
-/* header {
-    padding-top: 120px;
-} */
-
 /* Footer styles */
 footer {
     align-items: last baseline;
@@ -81,6 +77,7 @@ footer {
     width: 100%;
     bottom: 0;
     text-align: center;
+    position: fixed;
 }
 
 footer img {
@@ -123,11 +120,7 @@ ul li {
 .wrapper {
     display: flex;
     padding-left: 42%;
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    /* width: 800px; */
     height: 70px;
-    /* background-image: linear-gradient(to bottom right, rgba(129, 194, 222, 1), rgba(79, 146, 172, 1)); */
     transition: all 0.4s ease-out;
 }
 .wrapper__links {
