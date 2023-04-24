@@ -49,7 +49,7 @@ button {
     text-overflow: ellipsis;
 }
 
-label {
+label.explicit {
     line-height: 1.1;
     font-size: 40px;
     display: grid;
@@ -58,8 +58,8 @@ label {
     align-content: center;
 }
 
-#duration-filter {
-    width: 600px;
+#duration-filter, #duration-filter-min {
+    width: 80px;
     font-size: 30px;
     height: 60px;
 }

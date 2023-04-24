@@ -2,13 +2,14 @@ const baseURL = "https://itunes.apple.com/search?limit=50&media=music&entity=mus
 
 const search_body = document.querySelector(".search-results");
 
-const duration_filter = document.querySelector("#duration-filter");
+const duration_filter_mins = document.querySelector("#duration-filter-min");
+const duration_filter_secs = document.querySelector("#duration-filter");
 const explicit_filter = document.querySelector("#explicit-filter");
 
 var results = [];
 
 function filter_results (res) {
-    var max_time = duration_filter.value * 1000;
+    var max_time = duration_filter_mins.value * 60000 + duration_filter_secs.value * 1000;
     const enable_explicit = !explicit_filter.checked;
     if (max_time == 0) max_time = 1e9;
     return res
@@ -86,7 +87,8 @@ function insert_into_dom (elements) {
     });
 
     explicit_filter.disabled = false;
-    duration_filter.disabled = false;
+    duration_filter_secs.disabled = false;
+    duration_filter_mins.disabled = false;
     searchbar.disabled = false;
     
     search_body.append(fragment);
@@ -102,7 +104,8 @@ function search (event) {
     }
 
     explicit_filter.disabled = true;
-    duration_filter.disabled = true;
+    duration_filter_secs.disabled = true;
+    duration_filter_mins.disabled = true;
     searchbar.disabled = true;
     fetch(url + "term=" + search_term)
 	.then((response) => response.json())
@@ -115,6 +118,7 @@ function search (event) {
 document.querySelector("#search").onclick = search;
 
 document.querySelector("#clear").onclick = function (){
-    duration_filter.value = "";
+    duration_filter_mins.value = "";
+    duration_filter_secs.value = "";
     explicit_filter.checked = false;
 };
