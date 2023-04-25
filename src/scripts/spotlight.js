@@ -1,4 +1,3 @@
-// Animation
 var zoomIn = true;
 function funcZoomIn() {
   document.getElementById("artist-image").style.width = "550px";
@@ -71,7 +70,6 @@ function addReview() {
   } else {
     alert("Please fill in all fields.");
   }
-
 }
 
 console.clear();
@@ -182,9 +180,7 @@ var c = new Clock(deadline, function () { alert('countdown complete') });
 var flip = document.querySelector(".clock-flip");
 flip.appendChild(c.el);
 
-
-
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   var image = document.getElementById('artist-image');
   var currentWidth = 900;
   var targetWidth = 500;
