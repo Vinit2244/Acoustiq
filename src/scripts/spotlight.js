@@ -181,3 +181,29 @@ var deadline = new Date('June 30, 2023 00:00:00');
 var c = new Clock(deadline, function () { alert('countdown complete') });
 var flip = document.querySelector(".clock-flip");
 flip.appendChild(c.el);
+
+
+
+window.addEventListener('load', function() {
+  var image = document.getElementById('artist-image');
+  var currentWidth = 900;
+  var targetWidth = 500;
+  var transitionTime = 3000; // 5 seconds
+
+  image.style.width = currentWidth + 'px';  // set initial size to 600x600
+
+  var startTime = performance.now();
+
+  function animate() {
+    var elapsed = performance.now() - startTime;
+    var progress = Math.min(elapsed / transitionTime, 1); // ensure progress is between 0 and 1
+    var newWidth = currentWidth + (targetWidth - currentWidth) * progress; // interpolate between current and target widths
+    image.style.width = newWidth + 'px';
+
+    if (progress < 1) {
+      requestAnimationFrame(animate); // continue animating
+    }
+  }
+
+  requestAnimationFrame(animate); // start the animation
+});
