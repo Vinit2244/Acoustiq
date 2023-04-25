@@ -31,6 +31,9 @@ button {
 }
 
 #search {
+    position: absolute;
+    left: 1575px;
+    z-index: 10000;
     width: 106px;
     height: 106px; 
 }
@@ -113,3 +116,4 @@ label.explicit {
     color: white;
     font-size: 40px;
 }
+
