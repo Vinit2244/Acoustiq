@@ -1,11 +1,11 @@
 # project-iss-lite 
 
 # Starting off...
-How to use: open [Home](./src/index.html)
+How to use: open [Home](./src/Main-pages/index.html)
 
 # Directory Structre:
 .
-├── ASSUMPTIONS.md (contains all the assumptions that we have made)
+├── ASSUMPTIONS.md                     - contains all the assumptions made
 ├── README.md
 └── src                                 - contains complete website
     ├── CSS                             - contains all the css files
@@ -238,3 +238,31 @@ How to use: open [Home](./src/index.html)
     - [x] how to open website for evals
 
 # Requirements for phase 2:
+- [x] Navbar Effects using JS:
+    - [x] Include search and spotlight pages in header
+    - [x] Highlight the page indicating current page
+- [x] Typing effect using JS:
+    - [x] Select page to put typing effect on (About Page)
+    - [x] Select text to put in the effect (Think Music, Think Acoustic)
+- [x] Search page:
+    - [x] Search a word -> queried through iTunes API
+        - [x] Atleast 10 results
+        - [x] Information:
+            - [x] Track Name
+            - [x] Artist Name
+            - [x] Album Poster
+    - [x] Playable audio clip wherever available
+    - [x] Filtering:
+        - [x] Duration of song
+        - [x] Explicitness
+    - [x] Option to remove all the filters
+- [x] Spotlight page:
+    - [x] Image of Artist
+    - [x] Zoom In/Zoom Out effect on artist image when page loads
+    - [x] Reviews:
+        - [x] 5-star based rating mechanism (using radio button)
+        - [x] Input Name of user
+        - [x] Input text review
+        - [x] Show reviews in the form of a table (can be deleted on refreshing the page)
+    - [x] Countdown Timer:
+        - [x] Till 30th June 2023 00:00
