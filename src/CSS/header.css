@@ -177,11 +177,11 @@ ul li {
     top: -50px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #ffcc00;
+    background-color: #e78b3a;
     color: #333;
     text-align: center;
     padding: 10px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     z-index: 9999;
     opacity: 0;
     padding-left: 50px;
