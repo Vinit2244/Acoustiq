@@ -128,17 +128,6 @@ input[type="checkbox"] {
     display: none;
 }
 
-/* Set the custom radio button image */
-/* input[type="radio"] + label {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: url('./add-to-playlist-white.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-} */
-
 /* Set the custom radio button image when selected */
 input[type="checkbox"]:checked + label {
     display: inline-block;
