@@ -14,8 +14,8 @@ do
     do
         count=0
         `sed -i -E 's|<th><img src="./media/logos/clock.png" alt="" style="height: 45px;"></th>|<th><img src="./media/logos/clock.png" alt="" style="height: 45px;"></th>\n\t\t\t\t<th style="text-align: center;">Add to Playlist</th>|' $file`
-        `sed -i -E 's|<td class="social">|<td style="text-align: center;">\n\t\t\t\t\t<form>\n\t\t\t\t\t\t<input type="radio" name="playlist-radio-button" id="radio-button-number">\n\t\t\t\t\t\t<label for="radio-button-number"></label>\n\t\t\t\t\t</form>\n\t\t\t\t</td> \n\t\t\t\t<td class="social">|' $file`
-        `sed -i -E 's|<script src="../scripts/hover.js"></script>|<script src="../scripts/hover.js"></script>\n<script src="../scripts/pop-up.js"></script>|' hope.html`
+        `sed -i -E 's|<td class="social">|<td style="text-align: center;">\n\t\t\t\t\t<form>\n\t\t\t\t\t\t<input type="radio" name="playlist-radio-button" id="radio-button-number" onclick="showPopUp(this)>\n\t\t\t\t\t\t<label for="radio-button-number"></label>\n\t\t\t\t\t</form>\n\t\t\t\t</td> \n\t\t\t\t<td class="social">|' $file`
+        `sed -i -E 's|<script src="../scripts/hover.js"></script>|<script src="../scripts/hover.js"></script>\n<script src="../scripts/pop-up.js"></script>|' $file`
     done
 done < ./temp.txt
 
