@@ -17,7 +17,7 @@ def query_db(*args, **kw_args):
 
 
 @app.route("/playlist/add", methods=["POST"])
-def add_to_playlist() -> None:
+def add_to_playlist():
     details = request.form.to_dict()
 
     name = details['name']
@@ -38,7 +38,7 @@ def add_to_playlist() -> None:
     hash, name, img, artist, album, duration
     }
     """)
-    pass
+    return "Song added to playlist!", 201
 
 
 @app.route("/playlist/display")
@@ -46,7 +46,8 @@ def display_playlist():
     result = query_db("""
     SELECT name, img, artist, album, duration
     FROM songs; """)
-    return dict(result)
+    return str([{"name": _[0], "img": _[1], "artist": _[2], "album": _[3], "duration": _[4]}
+            for _ in result]), {'ContentType':'application/json'}
 
 
 if __name__ == '__main__':
@@ -56,4 +57,4 @@ if __name__ == '__main__':
         UNIQUE(id)
     );
     """)
-    app.run()
+    app.run(debug=True)
