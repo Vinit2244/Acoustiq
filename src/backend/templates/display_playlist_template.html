@@ -1,0 +1,29 @@
+<table class="list" CELLSPACING="0">
+  <tr style="font-size: 30px;">
+    <th style="width: 40px;">#</th>
+    <th style="width: 100px;"></th>
+    <th style="width:500px;">Song</th>
+    <th style="width:500px;">Artist</th>
+    <th><img src="./media/logos/clock.png" alt="" style="height: 45px;"></th>
+    <th style="text-align: center;">Add to Playlist</th>
+    <th></th>
+  </tr>
+  
+  
+  {% for el in data %}
+  
+  <tr style="font-size: 30px;">
+    <td class="index">{{ loop.index }}</td>
+    <td class="song-image"><img src="{{ el.img }}" alt=""></td>
+    <td>{{ el.name }}</td>
+    <td>{{ el.artist }}</td>
+    <td>{{ el.duration }}</td>
+    <td>
+      <form>
+	<input type="checkbox" name="playlist-checkbox-button" id="checkbox-button-{{ loop.index }}" data-el-id="{{ el.id }}" checked>
+	<label for="checkbox-button-{{ loop.index }}"></label>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>

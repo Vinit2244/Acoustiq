@@ -21,7 +21,7 @@ function showPopUp(element) {
     artist = artist_node.innerText;
 
     let body = new URLSearchParams({
-	name: name,
+	name: song,
 	artist: artist,
 	duration: duration,
 	album: album,
@@ -36,10 +36,12 @@ function showPopUp(element) {
 	},
 	body: body,
     })
-	.then(() => {notification.textContent = "Song added to the playlist!";})
+	.then(() => {
+	    notification.textContent = "Song added to the playlist!";
+	    element.disabled = true;
+	})
 	.catch(() => notification.textContent = "Couldn't reach server!");
     
-    element.disabled = true;
     document.body.appendChild(notification);
     
     setTimeout(function() {

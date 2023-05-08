@@ -1,5 +1,6 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import sqlite3
+import json
 
 # Setup for flask app and database
 app = Flask(__name__)
@@ -15,6 +16,32 @@ def query_db(*args, **kw_args):
     con.close()
     return result
 
+def get_all_songs():
+    result = query_db("""
+    SELECT name, img, artist, album, duration, id
+    FROM songs; """)
+    return render_template('display_playlist_template.html', data=[
+        {"name": _[0],
+         "img": _[1],
+         "artist": _[2],
+         "album": _[3],
+         "duration": _[4],
+         "id": _[5]}
+        for _ in result])
+
+@app.after_request
+def apply_caching(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET,POST,DELETE"
+    return response
+
+@app.route("/playlist/remove/<id>", methods=["DELETE"])
+def remove_from_playlist(id):
+    query_db("""
+    DELETE FROM songs
+    WHERE 
+    id LIKE ?;""", (id,))
+    return get_all_songs()
 
 @app.route("/playlist/add", methods=["POST"])
 def add_to_playlist():
@@ -31,23 +58,17 @@ def add_to_playlist():
     import hashlib
     hash = hashlib.sha1(song_str.encode('utf-8')).hexdigest()[:10]
 
-    query_db(f"""
+    query_db("""
     INSERT OR IGNORE INTO
         songs (id, name, img, artist, album, duration)
-    VALUES {
+    VALUES (?, ?, ?, ?, ?, ?) """, (
     hash, name, img, artist, album, duration
-    }
-    """)
+    ))
     return "Song added to playlist!", 201
-
 
 @app.route("/playlist/display")
 def display_playlist():
-    result = query_db("""
-    SELECT name, img, artist, album, duration
-    FROM songs; """)
-    return str([{"name": _[0], "img": _[1], "artist": _[2], "album": _[3], "duration": _[4]}
-            for _ in result]), {'ContentType':'application/json'}
+    return get_all_songs()
 
 
 if __name__ == '__main__':
