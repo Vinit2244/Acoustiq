@@ -1,7 +1,9 @@
 # project-iss-lite 
 
 # Starting off...
-How to use: open [Home](./src/Main-pages/index.html)
+How to use:
+- navigate to ``/src/backend`` and run ``py playlists.py`` in the background.
+- open [Home](./src/Main-pages/index.html)
 
 # Directory Structre:
 .
