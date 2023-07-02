@@ -175,7 +175,7 @@ function Clock(countdown, callback) {
   setTimeout(updateClock, 500);
 }
 
-var deadline = new Date('June 30, 2023 00:00:00');
+var deadline = new Date('June 30, 2028 00:00:00');
 var c = new Clock(deadline, function () { alert('countdown complete') });
 var flip = document.querySelector(".clock-flip");
 flip.appendChild(c.el);
